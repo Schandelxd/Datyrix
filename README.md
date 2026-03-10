@@ -14,7 +14,7 @@ To get this project running locally on your machine, follow these steps:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/datyrix.git
+git clone https://github.com/Schandelxd/Datyrix.git
 cd datyrix
 ```
 

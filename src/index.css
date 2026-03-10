@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #22D3EE;
+  --color-primary-rgb: 34, 211, 238;
+  --color-secondary: #A78BFA;
+  --color-secondary-rgb: 167, 139, 250;
+  --color-bg-main: #0F172A;
+  --color-card-bg: #1E293B;
+  --color-highlight: #F472B6;
+  --color-text-color: #E5E7EB;
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-bg-main: var(--color-bg-main);
+  --color-card-bg: var(--color-card-bg);
+
+  --color-primary-accent: var(--color-primary);
+  --color-secondary-accent: var(--color-secondary);
+  --color-text-color: var(--color-text-color);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-color);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+.glass-card {
+  background-color: color-mix(in srgb, var(--color-card-bg) 70%, transparent);
+  backdrop-filter: blur(12px);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.neon-text-primary {
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(var(--color-primary-rgb), 0.5);
+}
+
+.neon-text-secondary {
+  color: var(--color-secondary);
+  text-shadow: 0 0 10px rgba(var(--color-secondary-rgb), 0.5);
+}
+
+.neon-border {
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 0 10px rgba(var(--color-primary-rgb), 0.3), inset 0 0 10px rgba(var(--color-primary-rgb), 0.2);
+}

@@ -25,6 +25,17 @@
 - **Secure Authentication:** Robust user management backed by Supabase, featuring protected routes and persistent user-specific theme preferences stored securely.
 - **Resilient Architecture:** Bulletproof UI guarded by React Error Boundaries, ensuring individual widget API timeouts never crash the overarching application.
 
+## UI Preview
+
+### Main Dashboard
+![Datyrix Main Dashboard](public/assets/screenshots/dashboard.png)
+
+### Dynamic Theme Customization
+![Datyrix Settings & Theming](public/assets/screenshots/settings.png)
+
+### Mock API Management
+![Datyrix API Configuration](public/assets/screenshots/api_management.png)
+
 ## Installation
 
 Follow these steps to set up the project locally on your machine.

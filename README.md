@@ -1,60 +1,94 @@
-# Datyrix - Real-time Data Dashboard
+<h1 align="center">Datyrix</h1>
 
-Datyrix is a stunning, high-performance real-time data orchestration dashboard featuring dynamic theming, responsive widgets (Weather, Crypto, AQI, World Clock), and a complete mock API management system.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Supabase-18181A?style=for-the-badge&logo=supabase&logoColor=3ECF8E" alt="Supabase" />
+</p>
+
+> Datyrix is a high-performance, real-time API orchestration dashboard featuring a secure Supabase backend, responsive widgets, and a dynamic, user-customizable glassmorphic neon theme engine.
+
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage Examples](#usage-examples)
+- [Technologies Used](#technologies-used)
+- [Contributing Guidelines](#contributing-guidelines)
+- [License](#license)
+- [Contact & Support](#contact--support)
 
 ## Features
-- **Real-time Data Integration**: Live feeds for Crypto, Weather, Time, and Air Quality (mocked/API driven).
-- **Dynamic Theming Engine**: Personalize your interface with light/dark/midnight modes and custom neon accent colors that dynamically update the entire UI's glowing effects.
-- **Responsive Layout**: Seamlessly shape-shifts from ultra-wide monitors down to a touch-friendly mobile interface with a native bottom tab bar navigation.
-- **Secure Authentication**: Backend integrated with Supabase for robust user management and protected routes.
+- **Real-Time Data Integration:** Live feeds for Cryptocurrency prices, Global Weather data, Location-aware World Clock, and Air Quality Indexes.
+- **Dynamic Theming Engine:** Personalize your interface with Midnight, Neon Dark, or Light modes, coupled with custom glowing accent colors that dynamically update across the entire UI.
+- **Responsive Layout:** A fluid grid system that seamlessly adapts from ultra-wide desktop monitors down to a touch-friendly mobile interface with a native bottom tab navigation bar.
+- **Secure Authentication:** Robust user management backed by Supabase, featuring protected routes and persistent user-specific theme preferences stored securely.
+- **Resilient Architecture:** Bulletproof UI guarded by React Error Boundaries, ensuring individual widget API timeouts never crash the overarching application.
 
-## Local Development Setup
+## Installation
 
-To get this project running locally on your machine, follow these steps:
+Follow these steps to set up the project locally on your machine.
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/Schandelxd/Datyrix.git
-cd datyrix
-```
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm or yarn
+- A [Supabase](https://supabase.com/) account and project.
 
-### 2. Install Dependencies
-```bash
-npm install
-```
+### Setup Instructions
 
-### 3. Environment Variables (Supabase)
-This project uses Supabase for authentication. You will need to create your own Supabase project and provide the keys locally.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Schandelxd/Datyrix.git
+   cd Datyrix
+   ```
 
-1. Go to [Supabase](https://supabase.com/) and create a new project.
-2. In your Supabase dashboard, go to project settings and find your `URL` and `anon public key`.
-3. Create a `.env` file in the root of your local `datyrix` project folder.
-4. Copy the contents of `.env_example` into your new `.env` file and insert your keys:
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-```env
-VITE_SUPABASE_URL=your_supabase_project_url_here
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
-```
+3. **Environment Variables (Supabase):**
+   This project uses Supabase for authentication. You must provide your own API keys for local development.
+   - Go to your Supabase project settings and retrieve your `Project URL` and `anon public key`.
+   - Create a `.env` file in the root directory.
+   - Copy the following block and insert your keys:
+     ```env
+     VITE_SUPABASE_URL=your_supabase_project_url_here
+     VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
+     ```
+   *(Note: The `.env` file is safely ignored by git and will not be pushed to your public repository).*
 
-*Note: Your `.env` file is safely ignored by git and will never be pushed to your public repository.*
+4. **Run the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   Open your browser to `http://localhost:5175/` to start exploring.
 
-### 4. Run the Development Server
-```bash
-npm run dev
-```
+## Usage Examples
+Datyrix functions primarily as a modular dashboard. 
+- **Authentication:** Create an account to securely access the protected dashboard.
+- **Customization:** Navigate to the `Settings` page to switch between UI themes and select a custom Neon Accent Color. Your selection will automatically save to your account and apply across all glows and charts.
+- **Monitoring:** View real-time API aggregations immediately upon loading the main dashboard root.
 
-Open your browser to `http://localhost:5175/` to see the application running.
+## Technologies Used
+- **Frontend Framework:** React 19 (Vite + HashRouter)
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Data Visualization:** Chart.js & react-chartjs-2
+- **Backend & Auth:** Supabase
 
-## Deployment
-When building for production (e.g., GitHub Pages, Vercel, Netlify), ensure you add your Supabase Environment Variables to your host's deployment settings.
+## Contributing Guidelines
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-```bash
-npm run build
-```
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Built With
-- **React.js** (Vite + HashRouter)
-- **Tailwind CSS v4**
-- **Framer Motion** (Animations)
-- **Chart.js**
-- **Supabase** (Auth Backend)
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact & Support
+Project Link: [https://github.com/Schandelxd/Datyrix](https://github.com/Schandelxd/Datyrix)  
+If you encounter any bugs or have feature requests, please open an Issue on the GitHub repository.
